@@ -1,45 +1,52 @@
 class branch {
   
-  branch(float xIn, float yIn, float xEIn, float sizeIn, float timeIn, String typeIn){
+  branch(float xIn, float yIn, float xEIn, float sizeIn, String typeIn){
     x = xIn;
     y = yIn;
     xE = xEIn;
     size = sizeIn;
-    time = timeIn;
+    time = 5;
     
     type = typeIn;
- 
+    bro = new ArrayList<PVector>();
     children = new ArrayList<branch>();
-  }
+    
+    while(x<width/2){
+      bro.add(new PVector(x, y));
+      if(type.equals("UP")){
+        y -=(noise(time)*2);
+      } else if (type.equals("DOWN")){
+        y -=(noise(time)*.5);
+      } else {
+        println("error in type inside display function");
+      }
+       x++;
+       time += 0.01;
+      }
+      
+     
+    }
+ 
+   
   
   void displayAll(){
-    if(x<xE){
+    background(255);
       display();
-    } else{
-        for(branch b: children){
-          pushMatrix();
-          translate(x, -y);
+      for(branch b: children){
           b.display();
-          popMatrix();
         }
       }
-    }
 
     
   void display(){
-    time += 0.01;
     stroke(0);
-    if(type.equals("UP")){
-      y -=(noise(time)*2);
-    } else if (type.equals("DOWN")){
-      y -=(noise(time)*.5);
-    } else {
-      println("error in type inside display function");
-    }
+    strokeWeight(15);
     
-    x += 1;
-    strokeWeight(random(10, 15));
-    point(x, y);
+    beginShape();
+    for(PVector pv: bro){
+      vertex(pv.x, pv.y);
+    }
+    endShape();
   }
 
   
@@ -49,7 +56,11 @@ class branch {
   float size;
   float time;
   
+  float xT;
+  float yT;
+  
   String type;
 
   ArrayList<branch> children;
+  ArrayList<PVector> bro;
 }

@@ -11,12 +11,12 @@ void setup() {
   y=height;
  
   
-  b1 = new branch(0, height, width/2, 1, 5, "UP");
+  b1 = new branch(0, height, width/2, 1,"UP");
   branches.add(b1);
   
-  b2 = new branch(0, height, width/2, 1, 5, "UP");
+  b2 = new branch(width/2, b1.bro.get(b1.bro.size()-1).y, width/2, 1, "UP");
   b1.children.add(b2);
-  b3 = new branch(0, height, width/2, 1, 5, "DOWN");
+  b3 = new branch(width/2, b1.bro.get(b1.bro.size()-1).y, width/2, 1, "DOWN");
   b1.children.add(b3);
   
   println(b1.children);
