@@ -47,10 +47,10 @@ class Branch{
         children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, l+1, "DOWN", t-1));
       } else {
         // println("end vector x: " + vectors.get(vectors.size()-1).x + " end vector y: " + vectors.get(vectors.size()-1).y);
-        children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, 100, "BACKWARD", t-1));
-        children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, 100, "REALLYUP", t-1));
-        children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, 100, "UP", t-1));
-        children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, 100, "DOWN", t-1));
+        children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, width*100/1440, "BACKWARD", t-1));
+        children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, width*100/1440, "REALLYUP", t-1));
+        children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, width*100/1440, "UP", t-1));
+        children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, width*100/1440, "DOWN", t-1));
       }
     } else{
       //println("done");
