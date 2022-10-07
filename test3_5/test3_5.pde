@@ -11,7 +11,7 @@ void setup(){
   
   leaves = new ArrayList<Leaf>();
   for(int i = 0; i < 3000; i++){
-    leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*50/900), "SPRING"));
+    leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*50/900), "SUMMER"));
   } 
   for(int i = 0; i < 3000; i++){
     leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*25/900), "SPRING"));
