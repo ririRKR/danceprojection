@@ -37,11 +37,11 @@ class Leaf{
     } else if(season.equals("FALL")){
       which = int(random(1, 4));
       if(which == 1){
-        fill = color(random(225, 255), 102, 51, random(25, 255)); //light orange red
+        fill = color(255, 102, 51, random(25, 255)); //light orange red
       } else if(which == 2){
-        fill = color(random(220, 250), 181, 127, random(25, 255)); // light orange
+        fill = color(250, 181, 127, random(25, 255)); // light orange
       } else if(which == 3){
-        fill = color(random(220, 250), 242, 127, random(25, 255)); //light yellow
+        fill = color(250, 242, 127, random(25, 255)); //light yellow
       }
     }
   }
