@@ -12,10 +12,10 @@ void setup(){
   
   leaves = new ArrayList<Leaf>();
   for(int i = 0; i < 3000; i++){
-    leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*50/900), "WINTER"));
+    leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*50/900), "SPRING"));
   } 
   for(int i = 0; i < 3000; i++){
-    leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*25/900), "WINTER"));
+    leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*25/900), "SPRING"));
   }
   smooth(2);
 }
