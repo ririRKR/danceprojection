@@ -32,7 +32,7 @@ class Branch {
     }
 
     if (t>0) {
-      println(t);
+      //println(t);
       if (t!=1) {
         // println("end vector x: " + vectors.get(vectors.size()-1).x + " end vector y: " + vectors.get(vectors.size()-1).y);
         children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, l+1, "BACKWARD", t-1));
@@ -49,9 +49,26 @@ class Branch {
     } else {
       //println("done");
     }
+    
+      println("vector size: " + vectors.size());
   }
 
   void displayAll() {
+        
+    //stroke(f); //#AA9C7D
+    //println("fill: " + f); 
+    strokeWeight(size);
+    //fill(fill); //#AA9C7D
+    
+    beginShape();
+    for (PVector pv : vectors) {
+      vertex(pv.x, pv.y);
+    }
+    endShape();
+    for (Branch b : children) {
+      b.displayAll();
+    }
+    /*
     stroke(f); //#AA9C7D
     println("fill: " + f); 
     strokeWeight(size);
@@ -65,6 +82,7 @@ class Branch {
     for (Branch b : children) {
       b.displayAll();
     }
+    */
   }
 
 

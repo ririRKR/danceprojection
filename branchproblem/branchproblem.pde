@@ -2,7 +2,7 @@ Tree tree;
 
 void setup() {
   //smooth(8);
-  size(900, 900);
+  size(900, 900, P2D);
  // fullScreen();
   tree = new Tree();
   tree.dark = false;

@@ -11,7 +11,6 @@ void setup() {
 }
 
 
-
 void draw() {
   background(bgColor);
   tree.display();

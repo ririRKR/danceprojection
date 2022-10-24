@@ -32,7 +32,7 @@ class Branch {
     }
 
     if (t>0) {
-      println(t);
+      //println(t);
       if (t!=1) {
         // println("end vector x: " + vectors.get(vectors.size()-1).x + " end vector y: " + vectors.get(vectors.size()-1).y);
         children.add(new Branch(vectors.get(vectors.size()-1).x, vectors.get(vectors.size()-1).y, size, l+1, "BACKWARD", t-1));
@@ -53,6 +53,7 @@ class Branch {
 
   void displayAll() {
     stroke(f); //#AA9C7D
+    println("branch fill: " + f);
     strokeWeight(size);
     
     beginShape();
@@ -64,6 +65,11 @@ class Branch {
       b.displayAll();
     }
   }
+  
+  void switchBranch(color end){
+    f = end;
+    println("end: " + end + " fill: " + f);
+  }
 
 
   float x;
@@ -74,6 +80,8 @@ class Branch {
   String type;
   int t;
   color f;
+  
+  int test;
 
   ArrayList<PVector> vectors;
   ArrayList<Branch> children;

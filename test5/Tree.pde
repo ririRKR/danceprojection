@@ -14,14 +14,19 @@ class Tree{
   
   void display(){
     if(dark == false){
+      //branch.f = #F52525;
+      stroke(#F52525);
       branch.displayAll();
+      noStroke();
       for (Leaf l : leaves) {
         l.seasonSwitch();
         l.display();
       }
     } else {
-      branch.f = 0; //fill
+      //branch.f = 0; //fill
+      stroke(0);
       branch.displayAll();
+      noStroke();
       for(Leaf l: leaves){
         l.fill = 0;
         l.display();

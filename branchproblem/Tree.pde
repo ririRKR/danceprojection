@@ -5,6 +5,7 @@ class Tree{
   }
   
   void display(){
+  
     if(dark == false){
       /*
       println("Hi");
@@ -12,9 +13,17 @@ class Tree{
       println(branch.f);
       branch.displayAll();
       */
+      /*
       branch.f = #5D523B;
-      fill(branch.f);
+      stroke(branch.f);
       circle(width/4, height/2, 50);
+      */
+      branch.switchBranch(255); //#5D523B
+      fill(branch.f);
+      //circle(width/2, height/2, 50);
+      branch.displayAll();
+      //vertex(width/4, height/2);
+      
     } else {
       /*
       println("hello");
@@ -22,8 +31,8 @@ class Tree{
       branch.displayAll();
       */
       branch.f = 0;
-      fill(branch.f);
-      circle(width/4, height/2, 50);
+      branch.displayAll();
+      vertex(width/4, height/2);
     }
   }
   
