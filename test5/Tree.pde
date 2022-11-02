@@ -3,7 +3,7 @@ class Tree{
      branch = new Branch(0, height, width*30/1440, 0.5, "UP", 2);
      leaves = new ArrayList<Leaf>();
      dark = false;
-     
+     //3500
      for (int i = 0; i < 3500; i++) {
        leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*50/900), "SPRING"));
      }
@@ -15,7 +15,7 @@ class Tree{
   void display(){
     if(dark == false){
       //branch.f = #F52525;
-      stroke(#F52525);
+      stroke(#AA9C7D);
       branch.displayAll();
       noStroke();
       for (Leaf l : leaves) {

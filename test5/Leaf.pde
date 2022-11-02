@@ -65,8 +65,8 @@ class Leaf {
     } else if (season.equals("WINTER")) {
       fill = lerpColor(fillWinter, fillSpring, increase);
     }
-    increase+=0.006; //increase of increase
-    //println(increase);
+    increase+=0.006; //0.00625 - ends in winter //0.0065 if she wants black at end //increase of increase (0.006
+    println(increase);
     if (increase >=1) {
       increase = 0;
       if (season.equals("SPRING") && done == false) {

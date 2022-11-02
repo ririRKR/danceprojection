@@ -4,6 +4,7 @@ color bgColor;
 void setup() {
   //smooth(8);
   fullScreen();
+  //size(500, 500);
   bgColor = #A6D1E8;
   background(bgColor); //#A6D1E8
   
@@ -18,7 +19,8 @@ void draw() {
 
 void keyPressed(){
   tree.dark = true;
-  bgColor = #080D36;
+  //bgColor = #080D36;
+  bgColor = 0;
 }
 
 void keyReleased(){
