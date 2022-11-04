@@ -61,7 +61,7 @@ class Leaf {
     } else if (season.equals("SUMMER")) {
       fill = lerpColor(fillSummer, fillFall, increase);
     } else if (season.equals("FALL")) {
-      fill = lerpColor(fillFall, fillWinter, increase);
+      fill = lerpColor(fillFall, fillWinter, increase+0.002);
     } else if (season.equals("WINTER")) {
       fill = lerpColor(fillWinter, fillSpring, increase);
     }
