@@ -7,7 +7,7 @@ class Tree{
      for (int i = 0; i < 3500; i++) {
        leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*50/900), "SPRING"));
      }
-     for (int i = 0; i < 4000; i++) {
+     for (int i = 0; i < 3500; i++) {
        leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*25/900), "SPRING"));
      }
   }

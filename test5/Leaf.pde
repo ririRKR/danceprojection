@@ -44,7 +44,7 @@ class Leaf {
     }
 
     if (whichFall == 1) {
-      fillFall = color(255, 102, 51, transparency); //light orange red
+      fillFall = color(252, 141, 107, transparency); //color(255, 102, 51, transparency); //light orange red
     } else if (whichFall == 2) {
       fillFall = color(250, 181, 127, transparency); // light orange
     } else if (whichFall == 3) {
@@ -63,10 +63,10 @@ class Leaf {
     } else if (season.equals("FALL")) {
       fill = lerpColor(fillFall, fillWinter, increase+0.002);
     } else if (season.equals("WINTER")) {
-      fill = lerpColor(fillWinter, fillSpring, increase+0.004);
+      fill = lerpColor(fillWinter, fillSpring, increase+0.003);
     }
     increase+=0.006; //0.00625 - ends in winter //0.0065 if she wants black at end //increase of increase (0.006
-    println(increase);
+    //println(increase);
     if (increase >=1) {
       increase = 0;
       if (season.equals("SPRING") && done == false) {

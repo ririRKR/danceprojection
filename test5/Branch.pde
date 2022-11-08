@@ -50,7 +50,7 @@ class Branch {
       //println("done");
     }
     
-      println("vector size: " + vectors.size());
+      //println("vector size: " + vectors.size());
   }
 
   void displayAll() {
