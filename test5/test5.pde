@@ -1,5 +1,15 @@
+
+
+// notes from tech rehearsal:
+//   1) no cursor
+//   2) fade in/out to black at beginning and end
+//   3) fade between scenes
+
+
+
 Tree tree;
 color bgColor;
+
 
 void setup() {
   //smooth(8);
