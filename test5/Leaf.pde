@@ -44,39 +44,41 @@ class Leaf {
     }
 
     if (whichFall == 1) {
-      fillFall = color(252, 141, 107, transparency); //color(255, 102, 51, transparency); //light orange red
+      fillFall = color(202, 91, 57, transparency); //252, 141, 107
+      //color(255, 102, 51, transparency); //light orange red
     } else if (whichFall == 2) {
-      fillFall = color(250, 181, 127, transparency); // light orange
+      fillFall = color(200, 131, 97, transparency); // light orange
     } else if (whichFall == 3) {
-      fillFall = color(250, 242, 127, transparency); //light yellow
+      fillFall = color(200, 192, 77, transparency); //light yellow
     }
     
   }
 
   void seasonSwitch() {
     if (season.equals("SPRING") && done == false) {
-      fill = lerpColor(fillSpring, fillSummer, increase);
+      fill = lerpColor(fillSpring, fillSummer, increase-0.001);
+      //can add subtraction to account for fade in (mb 0.001?)
     } else if(season.equals("SPRING") && done == true){
       fill(fillSpring);
     } else if (season.equals("SUMMER")) {
       fill = lerpColor(fillSummer, fillFall, increase);
     } else if (season.equals("FALL")) {
-      fill = lerpColor(fillFall, fillWinter, increase+0.002);
+      fill = lerpColor(fillFall, fillWinter, increase);
     } else if (season.equals("WINTER")) {
-      fill = lerpColor(fillWinter, fillSpring, increase+0.003);
+      fill = lerpColor(fillWinter, fillSpring, increase);
     }
-    increase+=0.006; //0.00625 - ends in winter //0.0065 if she wants black at end //increase of increase (0.006
-    //println(increase);
+    increase+=0.025; //0.006 originally //0.00625 - ends in winter //0.0065 if she wants black at end //increase of increase (0.006
+    println(increase);
     if (increase >=1) {
       increase = 0;
-      if (season.equals("SPRING") && done == false) {
+      if (season.equals("SPRING")){ //&& done == false) {
         season = "SUMMER";
       } else if (season.equals("SUMMER")) {
         season = "FALL";
       } else if (season.equals("FALL")) {
         season = "WINTER";
       } else if (season.equals("WINTER")) {
-        done = true;
+        //done = true;
         season = "SPRING";
       }
     }

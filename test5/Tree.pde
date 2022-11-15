@@ -4,11 +4,11 @@ class Tree{
      leaves = new ArrayList<Leaf>();
      dark = false;
      //3500
-     for (int i = 0; i < 3500; i++) {
-       leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*50/900), "SPRING"));
+     for (int i = 0; i < 3000; i++) {
+       leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*50/900), "FALL"));
      }
-     for (int i = 0; i < 3500; i++) {
-       leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*25/900), "SPRING"));
+     for (int i = 0; i < 2500; i++) {
+       leaves.add(new Leaf(random(0, width), random(0, height), random(width*1/1440, height*25/900), "FALL"));
      }
   }
   
@@ -23,6 +23,7 @@ class Tree{
         l.display();
       }
     } else {
+      /*
       //branch.f = 0; //fill
       stroke(0);
       branch.displayAll();
@@ -31,7 +32,11 @@ class Tree{
         l.fill = 0;
         l.display();
       }
-    }
+    }*/
+    rectMode(CENTER);
+    fill(0);
+    rect(width/2, height/2, width, height);
+  }
   }
 
   ArrayList<Leaf> leaves;

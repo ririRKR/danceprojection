@@ -18,6 +18,7 @@ void setup() {
   //smooth(8);
   fullScreen();
   //size(1200, 900);
+  //size(displayWidth, displayHeight);
   bgColor = #A6D1E8;
   background(bgColor); //#A6D1E8
   
